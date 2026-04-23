@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}歡迎 - {{ user.username }}{% endblock %}
+{% block content %}
+<article>
+    <header>
+        <h2>歡迎，{{ user.username }}！ 🎉</h2>
+    </header>
+    <div class="overflow-auto">
+        <table class="striped">
+            <thead>
+                <tr>
+                    <th scope="col">欄位</th>
+                    <th scope="col">內容</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Email</td>
+                    <td>{{ user.email }}</td>
+                </tr>
+                <tr>
+                    <td>電話</td>
+                    <td>{{ user.phone | mask_phone }}</td>
+                </tr>
+                <tr>
+                    <td>出生日期</td>
+                    <td>{{ user.birthdate | format_tw_date }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <footer class="button-container">
+        <a href="{{ url_for('users_list_route') }}" role="button" class="secondary">查看會員清單</a>
+        <a href="{{ url_for('index') }}" role="button" class="outline">返回首頁</a>
+    </footer>
+</article>
+{% endblock %}

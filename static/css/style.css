@@ -1,0 +1,33 @@
+html {color-scheme: dark;}
+
+main {padding-top: 2rem;
+    padding-bottom: 2rem;}
+
+article {border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);}
+
+.overflow-auto {margin-bottom: 2rem;}
+
+form {margin-top: 1.5rem;}
+
+.margin-top {margin-top: 1rem;}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start; 
+    gap: 1rem;              
+    margin-top: 2rem;}
+
+.button-container a {
+    width: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: inline-flex;
+    align-items: center;}
+
+button.contrast, 
+[role="button"].contrast {
+    background-color: #0076ba;
+    border-color: #0082ce;
+    color: #ffffff;
+}
